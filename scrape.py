@@ -39,6 +39,11 @@ def getDaySubLists(week_list: list, day_dict: dict, current_day: int):
 
 
 date = '2023-07-06'
+half_pitch_2 = '671'
+full_pitch = '672'
+half_pitch_1 = '670'
+sports_hall = '653'
+aw_match_full_pitch = '669'
 pitch_4 = '465'
 pitch_3 = '466'
 pitch_3a = '467'
@@ -50,6 +55,7 @@ day_dict = {0: 'Mon', 1: 'Tue', 2: 'Wed', 3: 'Thu', 4: 'Fri', 5: 'Sat', 6: 'Sun'
 week_day = day_dict[int_week_day]
 
 url = 'https://portal.sportskey.com/venues/tu-dublin-city-campus/facilities/{}/time_slots?date={}&mp=true'.format(pitch_4,date)
+url_bla = 'https://portal.sportskey.com/venues/tu-dublin-blanchardstown-campus-sports/facilities/671/time_slots?date=2023-07-10&mp=true'
 response = requests.get(url)
 
 soup = BeautifulSoup(response.text, 'html.parser')
